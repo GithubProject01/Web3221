@@ -70,7 +70,6 @@ body{
     padding: 16px; 
   }
   .login-button {
-    background-color: black;
     color: white;
     padding: 16px 20px;
     border: none;
@@ -82,7 +81,6 @@ body{
     width: 5%;
   }
   .register-button{
-    background-color: black;
   color: white;
   padding: 16px 20px;
   text-decoration: chocolate;
@@ -94,7 +92,6 @@ body{
   width: 15%;
   }
   .listing-button{
-    background-color: black;
     color: white;
     padding: 16px 20px;
     text-decoration: chocolate;
@@ -106,7 +103,6 @@ body{
     width: 5%;
   }
   .home-button{
-    background-color: black;
     color: white;
     text-align: center;
     text-decoration: chocolate;
