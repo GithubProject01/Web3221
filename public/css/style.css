@@ -78,8 +78,6 @@ body{
     font-weight: bold;
     cursor: pointer;
     opacity: 0.8;
-    text-align: center;
-    position: fixed;
     left: 2%;
     width: 5%;
   }
@@ -92,9 +90,7 @@ body{
   border: none;
   cursor: pointer;
   opacity: 0.8;
-  text-align: center;
-  position: fixed;
-  left: 2%;
+   left: 2%;
   width: 15%;
   }
   .listing-button{
