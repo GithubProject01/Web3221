@@ -1,0 +1,12 @@
+<h2>Here are some Meal Packages popular these days to make a choice</h2>
+<div class="container">
+    <div class="wrapper">
+    {{#each data}}
+    <div>
+    <img src="/images/{{this.img}}">
+    <div class="bold">{{this.title}}</div>
+    <div>price: {{this.price}}</div>
+    </div>     
+    {{/each}}
+    </div>
+</div>

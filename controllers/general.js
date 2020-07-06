@@ -1,8 +1,7 @@
 const express = require('express')
 const router = express.Router();
 
-
-//home route
+// to load home route
 const products = require("../models/product");
 router.get("/", (req, res)=>{
     res.render("general/home",{
@@ -11,11 +10,12 @@ router.get("/", (req, res)=>{
     })
 });
 
+// to load dashboard page after registration
 router.get("/dashboard", (req, res)=>{
     res.render("general/dashboard");
 });
 
-// listing route
+// to load listing route
 router.get("/listing", (req, res)=>{
     res.render("products/listing",{
         title: "Package Title",
@@ -23,14 +23,14 @@ router.get("/listing", (req, res)=>{
     })
 });
 
-// login route
+// to load login route
 router.get("/login", (req, res)=>{
     res.render("general/login",{
         title: "Login Title"
     })
 });
 
-//contact us route
+//to load contact us route
 router.get("/registration",(req,res)=>{
 
     res.render("general/registration",{
@@ -38,16 +38,20 @@ router.get("/registration",(req,res)=>{
     });
 });
 
-//process contact us form for when user submits form
+// to load contact us form when user submit form 
+// it is used to send mail to the maill written in the form
+
 router.post("/registration",(req,res)=>{
     const {firstname, lastname, email, message} = req.body;
     const sgMail = require('@sendgrid/mail');
     sgMail.setApiKey("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");
     const msg = {
-      from: `${email}`,
-      to: `kirtimarkan01@gmail.com`,
-      subject: 'Sending with Twilio SendGrid is Fun',
-      html: `Visiter full name ${firstname}`,
+        from: `kirtimarkan01@gmial.com`,
+        to: `${email}`,
+      subject: 'Welcome to Desi Tadka',
+      html: `Hello ${firstname},
+      we re glad you joined us.
+      Hope you enjoy our food varieties and for our special service for our customers`,
     };
     sgMail.send(msg)
     .then(()=>{
@@ -56,29 +60,6 @@ router.post("/registration",(req,res)=>{
     .catch(err=>{
         console.log(`Error ${err}`);
     })
-    //const {firstName,lastName,email} = req.body;
-    //const sgMail = require('@sendgrid/mail');
-    
-    //sgMail.setApiKey("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");
-    //const msg = {
-    //to: `${email}`,
-    //from: `kirtimarkan01@gmail.com`,
-    //subject: 'Contact Us Form Submit',
-    //html: 
-    //`Vistor's Full Name ${firstName} ${lastName} <br>
-     //Vistor's Email Address ${email} <br>
-    //`,
-    //};
-
-    //Asynchornous operation (who don't know how long this will take to execute)
-    //sgMail.send(msg);
-  //  .then(()=>{
-//REDIRECT THE USER TO THE DASHBOARD ROUTE
-//res.redirect("/dashboard");    })
-  //  .catch(err=>{
-    //    console.log(`Error ${err}`);
-    //});
-
-});
+    });
 
 module.exports = router;

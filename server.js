@@ -16,19 +16,14 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(express.static('public'));
 
-//load controllers
+//load controllers from controler to load pages
 const generalController = require("./controllers/general");
 
 //map each controller to the app object
-
 app.use("/",generalController);
 
-
-///sets up server
-//const PORT = 3000;
-
+///sets up server local host could be 3000
 const PORT = process.env.PORT || 3000;
 app.listen(PORT,()=>{
-
     console.log(`Web Server is up and running`);    
 });

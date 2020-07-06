@@ -1,0 +1,55 @@
+<h2>Home Page</h2>
+<img class="image" src="/images/home.jpg" alt="no image" style="width:90%;height:60%;">
+
+<b>Some of Basic Facilities available to our customers for Great experience</b>
+<div class="rows">
+  <div class="columns" title="Deliver the food for you">
+    <img src="/images/delivery.png" alt="Snow" style="width:40%">
+  </div>
+  <div class="columns" title="Order and Pickup the food">
+    <img src="/images/pickup.jpg" alt="Snow" style="width:40%">
+  </div>
+  <div class="columns" title="Order and dine in with us">
+    <img src="/images/dinein.jpg" alt="Forest" style="width:40%">
+  </div>
+  <div class="columns" title="Repeat your Previous Order">
+    <img src="/images/repeat.png" alt="Mountains" style="width:40%">
+  </div>
+  </div>
+  <b>Top Meal Packages that are ready within Few Minutes</b>
+  <div class="container">
+    <div class="wrapper">
+    {{#each data}}
+    <div>
+    <img src="/images/{{this.img}}">
+    <div class="bold">{{this.title}}</div>
+    <div class="price">price: ${{this.price}}</div> 
+    </div>     
+    {{/each}}
+    </div>
+</div>
+<footer>
+    <b>Menu of Our Restaurent<b>
+          <ul>
+              <li>Snacks</li>
+              <ul>
+                  <li>paneer Tikka</li>
+                  <li>Spring Roll</li>
+                  <li>Samosa</li>
+                  <li>Kachori</li>
+              
+              </ul>
+              <li>Main Course</li>
+              <ul>
+                  <li>Manchurian</li>
+                  <li>Butter Naan</li>
+                  <li>Dal Makhni</li>
+              </ul>
+              <li>Dessert</li>
+              <ul>
+                  <li>Ice Cream</li>
+                  <li>Rasgulla</li>
+                  <li>Ras Malai</li>
+              </ul>
+          </ul>
+      </footer>

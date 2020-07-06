@@ -1,0 +1,76 @@
+<form method="POST" class="form-container" action="/registration">
+<div class="forms">
+          <h1>Create Account</h1>
+          
+   
+                <div class="rows">
+  <div class="columns" title="Sign in with Facebook">
+    <img src="/images/facebook.png" alt="Snow" style="width:40%">
+  </div>
+  <div class="columns" title="Sign in with Google">
+    <img src="/images/google.jpg" alt="Snow" style="width:40%">
+  </div>
+  <div class="columns" title="Sign in with Twitter">
+    <img src="/images/twitter.jpg" alt="Forest" style="width:40%">
+  </div>
+  <div class="columns" title="Sign in with Linkedin">
+    <img src="/images/linkedin.png" alt="Mountains" style="width:40%">
+  </div>
+</div><br>
+          <label for="firstname">First Name</label>
+             
+              <input
+                id="firstname"
+                name="firstname"
+                autocomplete="firstname"
+                type="text"
+                required="required"
+                maxlength="30"
+                size="20"
+                autofocus
+              /><br><br>
+
+              <label for="lastname">Last Name</label>
+
+              <input
+                id="lastname"
+                name="lastname"
+                type="text"
+                maxlength="30"
+                required
+                tabindex="0"
+              /><br><br>
+
+          <label for="email">Email</label>
+              <input
+                id="email"
+                name="email"
+                placeholder="e.g. abc@xyz.com"
+                pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
+                autocomplete="email"
+                required
+                type="text"
+                tabindex="0"
+              /><br><br>
+
+              <label for="password">Password</label>
+              <input
+                id="password"
+                name="password"
+                pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*?[0-9]).{6,12}"
+                required
+                type="text"
+                tabindex="0"
+              /><br>
+              <label for="message">Message</label>
+              <input
+                id="message"
+                name="message"
+                required
+                type="text"
+                tabindex="0"
+              /><br><br>
+ <button type="submit" class="sign">Sign UP</button>
+ </div>
+</form>
+          
