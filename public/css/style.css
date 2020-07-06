@@ -66,6 +66,9 @@ body{
     flex: 50%;
   }
   
+  .contain {
+    padding: 16px; 
+  }
   .login-button {
     background-color: black;
     color: white;
