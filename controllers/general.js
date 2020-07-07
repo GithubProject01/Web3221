@@ -49,7 +49,7 @@ router.post("/registration",(req,res)=>{
         from: 'kirtimarkan01@gmail.com',
         to: `${email}`,
         subject:'Welcome to Live Fit Food!',
-        text: `Hi ${firstName}, thank you for signing up!`
+        text: `Hi ${firstname}, thank you for signing up!`
     };
     sgMail.send(msg)
     .then(()=>{
