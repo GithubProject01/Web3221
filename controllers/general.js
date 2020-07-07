@@ -44,7 +44,7 @@ router.get("/registration",(req,res)=>{
 router.post("/registration",(req,res)=>{
     const {firstname, lastname, email, message} = req.body;
     const sgMail = require('@sendgrid/mail');
-    sgMail.setApiKey("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");
+    sgMail.setApiKey("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");
     const msg = {
         from: 'desitadkacuisine02@gmail.com',
         to: `${email}`,
