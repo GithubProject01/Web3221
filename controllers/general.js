@@ -44,7 +44,7 @@ router.get("/registration",(req,res)=>{
 router.post("/registration",(req,res)=>{
     const {firstname, lastname, email, message} = req.body;
     const sgMail = require('@sendgrid/mail');
-    sgMail.setApiKey("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");
+    sgMail.setApiKey(process.env.SEND_GRID_API_KEY);
     const msg = {
         from: 'desitadkacuisine02@gmail.com',
         to: `${email}`,
